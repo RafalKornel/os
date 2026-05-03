@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
 prompt typewritten
+export TYPEWRITTEN_PROMPT_LAYOUT="singleline_verbose"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
