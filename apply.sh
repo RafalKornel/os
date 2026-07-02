@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo cp keyd/default.conf /etc/keyd/default.conf
+sudo systemctl restart keyd.service
 
 cp -R hypr ~/.config/
 cp -R nvim ~/.config/
