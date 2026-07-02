@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo cp keyd.conf /etc/keyd/default.conf
+sudo cp keyd/default.conf /etc/keyd/default.conf
 
 cp -R hypr ~/.config/
 cp -R nvim ~/.config/
