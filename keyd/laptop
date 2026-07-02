@@ -1,0 +1,33 @@
+[ids]
+*
+
+[main]
+# optional: move your Win/Ctrl swap here instead of Hyprland
+leftalt = leftcontrol
+leftcontrol = capslock
+capslock = leftmeta
+leftmeta = leftalt
+
+# backspace = macro(S-home backspace)
+# delete = macro(S-end delete)
+
+
+[control]
+left = home
+right = end
+backspace = macro(S-home backspace)
+delete = macro(S-end delete)
+
+[control+shift]
+left = S-home
+right = S-end
+
+[alt]
+left = C-left
+right = C-right
+backspace = C-backspace
+delete = C-delete
+
+[alt+shift]
+left = C-S-left
+right = C-S-right
