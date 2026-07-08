@@ -8,6 +8,9 @@ cp -R nvim ~/.config/
 
 cp -R waybar ~/.config/
 
+cp -R .agents ~/.agents
+cp -R .pi ~/.pi
+
 cp -R zsh ~/.zsh
 cp zsh/.zshrc ~/.zshrc
 

@@ -1,0 +1,7 @@
+{
+  "lastChangelogVersion": "0.80.3",
+  "theme": "dark",
+  "defaultProvider": "ollama",
+  "defaultModel": "qwen3.6:35b-a3b",
+  "hideThinkingBlock": false
+}
