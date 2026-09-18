@@ -1,0 +1,11 @@
+{
+  "name": "pi-playwright-browser",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "playwright-core": "^1.47.0"
+  },
+  "pi": {
+    "extensions": ["./index.ts"]
+  }
+}

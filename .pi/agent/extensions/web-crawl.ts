@@ -17,8 +17,11 @@ export default function (pi: ExtensionAPI) {
           timeout: 30000,
         });
 
-        if (result.exitCode !== 0 || result.code !== 0) {
-          const errorMsg = result.stderr || result.stdout || `crwl exited with code ${result.code ?? result.exitCode}`;
+        // crwl may return non-zero exit codes for warnings while still producing valid markdown
+        // Only treat it as a real error if stdout is empty (nothing was scraped)
+        const hasContent = result.stdout && result.stdout.trim().length > 0;
+        if (result.exitCode !== 0 && !hasContent) {
+          const errorMsg = result.stderr || 'crwl exited with code ' + (result.code ?? result.exitCode);
           return {
             content: [{ type: "text", text: `Error crawling ${params.url}:\n${errorMsg}` }],
             details: { isError: true },
