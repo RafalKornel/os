@@ -1,15 +1,20 @@
 #!/bin/bash
 
-# Exit immediately if a command exits with a non-zero status
 set -eEo pipefail
 
-# Define Archy locations
-export ARCHY_PATH="$HOME/.local/share/archy"
+SOURCE_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+export ARCHY_PATH="${ARCHY_PATH:-$HOME/.local/share/archy}"
 export ARCHY_INSTALL="$ARCHY_PATH/install"
 export ARCHY_INSTALL_LOG_FILE="/var/log/archy-install.log"
 export PATH="$ARCHY_PATH/bin:$PATH"
 
-cp -R . $ARCHY_PATH
+# Sync into place only when we're not already there
+if [[ $SOURCE_DIR != $ARCHY_PATH ]]; then
+  rm -rf "$ARCHY_PATH"
+  mkdir -p "$ARCHY_PATH"
+  cp -a "$SOURCE_DIR/." "$ARCHY_PATH/"
+fi
 
 # Install
 source "$ARCHY_INSTALL/helpers/all.sh"
