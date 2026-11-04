@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# archy:summary=Reload opencode configuration (used by the Archy theme switching).
+
+if pgrep -x opencode >/dev/null; then
+  killall -SIGUSR2 opencode
+fi

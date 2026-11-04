@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Print the current Archy git branch
+
+echo $(git -C "$ARCHY_PATH" rev-parse --abbrev-ref HEAD)

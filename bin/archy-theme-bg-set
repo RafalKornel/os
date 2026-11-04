@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# archy:summary=Set the current background image
+# archy:args=<path-to-image>
+# archy:examples=archy theme bg set ~/Pictures/wallpaper.png
+
+if [[ -z $1 ]]; then
+  echo "Usage: archy-theme-bg-set <path-to-image>" >&2
+  exit 1
+fi
+
+BACKGROUND="$1"
+CURRENT_BACKGROUND_LINK="$HOME/.config/archy/current/background"
+
+# Create symlink to the new background
+ln -nsf "$BACKGROUND" "$CURRENT_BACKGROUND_LINK"
+
+# Kill existing swaybg and start new one
+pkill -x swaybg
+setsid uwsm-app -- swaybg -i "$CURRENT_BACKGROUND_LINK" -m fill >/dev/null 2>&1 &

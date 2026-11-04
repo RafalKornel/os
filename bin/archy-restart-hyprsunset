@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Restart the hyprsunset service (used for blue light filtering/night light).
+
+archy-restart-app hyprsunset

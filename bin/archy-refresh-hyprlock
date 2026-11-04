@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Overwrite the user config for hyprlock with the Archy default.
+
+archy-refresh-config hypr/hyprlock.conf

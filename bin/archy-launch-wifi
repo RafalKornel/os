@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archy:summary=Launch the Archy wifi controls (provided by the Impala TUI).
+
+rfkill unblock wifi
+archy-launch-or-focus-tui impala

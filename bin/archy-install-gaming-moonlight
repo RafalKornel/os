@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# archy:summary=Install Moonlight (NVIDIA GameStream / Sunshine client) for streaming games to this PC.
+# archy:requires-sudo=true
+
+set -e
+
+echo "Installing Moonlight..."
+archy-pkg-add moonlight-qt
+
+setsid gtk-launch com.moonlight_stream.Moonlight.desktop >/dev/null 2>&1 &

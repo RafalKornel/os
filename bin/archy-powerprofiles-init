@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# archy:summary=Set the correct power profile on boot based on current AC/battery state.
+
+if archy-battery-present && ! archy-ac-present; then
+  archy-powerprofiles-set battery
+else
+  archy-powerprofiles-set ac
+fi

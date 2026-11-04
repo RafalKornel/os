@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archy:summary=Overwrite the user tmux config with the Archy default and reload tmux.
+
+archy-refresh-config tmux/tmux.conf
+archy-restart-tmux

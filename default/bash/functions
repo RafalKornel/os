@@ -1,0 +1,1 @@
+for f in $ARCHY_PATH/default/bash/fns/*; do source "$f"; done

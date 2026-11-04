@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# archy:summary=Reset Waybar config to Archy defaults
+# archy:examples=archy refresh waybar
+
+archy-refresh-config waybar/config.jsonc
+archy-refresh-config waybar/style.css
+archy-restart-waybar

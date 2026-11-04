@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Detect ASUS ExpertBook B9406 series laptops on Intel Panther Lake.
+
+archy-hw-match "B9406" && archy-hw-intel-ptl

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Launch the Archy audio controls TUI (provided by wiremix).
+
+archy-launch-or-focus-tui wiremix

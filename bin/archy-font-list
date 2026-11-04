@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archy:summary=List available monospace fonts
+# archy:examples=archy font list | archy font set "CaskaydiaMono Nerd Font"
+
+fc-list :spacing=100 -f "%{family[0]}\n" | grep -v -i -E 'emoji|signwriting|archy' | sort -u

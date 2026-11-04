@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# archy:summary=Display keyboard brightness level using SwayOSD on the current monitor.
+# archy:args=<percent>
+
+percent="$1"
+
+progress="$(awk -v p="$percent" 'BEGIN{printf "%.2f", p/100}')"
+[[ $progress == "0.00" ]] && progress="0.01"
+
+archy-swayosd-client \
+  --custom-icon keyboard-brightness-symbolic \
+  --custom-progress "$progress" \
+  --custom-progress-text "${percent}%"

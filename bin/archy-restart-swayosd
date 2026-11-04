@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Restart the SwayOSD server
+
+archy-restart-app swayosd-server

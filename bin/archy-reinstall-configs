@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# archy:summary=Reset all Archy user configs to the defaults
+# archy:requires-sudo=true
+
+set -e
+
+# Overwrite all user configs with the Archy defaults.
+
+if (( EUID == 0 )); then
+  echo "Error: This script should not be run as root"
+  exit 1
+fi
+
+echo "Resetting all Archy configs"
+cp -R ~/.local/share/archy/config/* ~/.config/
+cp ~/.local/share/archy/default/bashrc ~/.bashrc
+echo '[[ -f ~/.bashrc ]] && . ~/.bashrc' | tee ~/.bash_profile >/dev/null
+
+$(bash $ARCHY_PATH/install/config/theme.sh)
+
+archy-refresh-limine
+archy-refresh-plymouth
+archy-nvim-setup

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# archy:summary=Run the full Archy update pipeline
+# archy:requires-sudo=true
+
+set -e
+
+# Ensure screensaver/sleep doesn't set in during updates
+hyprctl dispatch tagwindow +noidle &>/dev/null || true
+
+# Perform all update steps
+archy-update-keyring
+archy-update-available-reset
+archy-update-system-pkgs
+archy-migrate
+archy-update-aur-pkgs
+archy-update-orphan-pkgs
+archy-hook post-update
+
+archy-update-analyze-logs
+
+archy-update-restart
+
+# Re-enable screensaver/sleep after updates
+hyprctl dispatch tagwindow -- -noidle &>/dev/null || true

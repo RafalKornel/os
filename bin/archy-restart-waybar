@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archy:summary=Restart Waybar
+# archy:examples=archy restart waybar
+
+archy-restart-app waybar

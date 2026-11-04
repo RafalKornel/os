@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# archy:summary=Remove the Xbox Cloud Gaming web app.
+
+set -e
+
+archy-webapp-remove "Xbox Cloud Gaming"

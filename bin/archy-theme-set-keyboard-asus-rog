@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# archy:summary=Apply the current theme keyboard color to ASUS ROG keyboards
+
+ASUSCTL_THEME=~/.config/archy/current/theme/keyboard.rgb
+
+if archy-cmd-present asusctl; then
+  asusctl aura effect static -c $(sed 's/^#//' $ASUSCTL_THEME)
+fi

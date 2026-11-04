@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# archy:summary=Apply an Archy theme
+# archy:args=<theme-name>
+# archy:examples=archy theme list | archy theme set "Tokyo Night"
+
+if [[ -z $1 ]]; then
+  echo "Usage: archy-theme-set <theme-name>"
+  exit 1
+fi
+
+CURRENT_THEME_PATH="$HOME/.config/archy/current/theme"
+NEXT_THEME_PATH="$HOME/.config/archy/current/next-theme"
+USER_THEMES_PATH="$HOME/.config/archy/themes"
+ARCHY_THEMES_PATH="$ARCHY_PATH/themes"
+
+THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+if [[ ! -d $ARCHY_THEMES_PATH/$THEME_NAME ]] && [[ ! -d $USER_THEMES_PATH/$THEME_NAME ]]; then
+  echo "Theme '$THEME_NAME' does not exist"
+  exit 1
+fi
+
+# Setup clean next theme directory (for atomic theme config swapping)
+rm -rf "$NEXT_THEME_PATH"
+mkdir -p "$NEXT_THEME_PATH"
+
+# Copy official theme first, then overlay user customizations on top
+cp -r "$ARCHY_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
+cp -r "$USER_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
+
+# Generate colors.toml from alacritty.toml if theme is missing colors.toml
+if [[ ! -f $NEXT_THEME_PATH/colors.toml && -f $NEXT_THEME_PATH/alacritty.toml ]]; then
+  archy-theme-colors-from-alacritty "$NEXT_THEME_PATH"
+fi
+
+# Generate dynamic configs
+archy-theme-set-templates
+
+# Swap next theme in as current
+rm -rf "$CURRENT_THEME_PATH"
+mv "$NEXT_THEME_PATH" "$CURRENT_THEME_PATH"
+
+# Store theme name for reference
+echo "$THEME_NAME" >"$HOME/.config/archy/current/theme.name"
+
+# Change background with theme
+archy-theme-bg-next
+
+# Restart components to apply new theme
+if pgrep -x waybar >/dev/null; then
+  archy-restart-waybar
+fi
+archy-restart-swayosd
+archy-restart-terminal
+archy-restart-hyprctl
+archy-restart-btop
+archy-restart-opencode
+archy-restart-mako
+archy-restart-helix
+
+# Change app-specific themes
+archy-theme-set-gnome
+archy-theme-set-browser
+archy-theme-set-vscode
+archy-theme-set-obsidian
+archy-theme-set-keyboard
+
+# Call hook on theme set
+archy-hook theme-set "$THEME_NAME"

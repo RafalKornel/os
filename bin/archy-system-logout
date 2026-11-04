@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# archy:summary=Log out after closing application windows
+# archy:examples=archy logout | archy system logout
+# archy:aliases=archy logout
+
+nohup bash -c "sleep 2 && uwsm stop" >/dev/null 2>&1 &
+
+# Now close all windows
+archy-hyprland-window-close-all
+sleep 1 # Allow apps like Chrome to shutdown correctly

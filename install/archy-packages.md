@@ -1,0 +1,164 @@
+# Archy Packages
+
+Descriptions of every package in [`archy-base.packages`](archy-base.packages),
+installed via `install/packaging/base.sh` and also used by the ISO builder when
+determining needs.
+
+Format: `package — category: description`
+
+- **1password-beta** — Security: GUI password manager.
+- **1password-cli** — Security: 1Password command-line client.
+- **aether** — Theming: wallpaper-driven desktop theme generator (AUR).
+- **alacritty** — Terminal: GPU-accelerated terminal emulator.
+- **alsa-utils** — Audio: ALSA sound tools (`alsamixer`, `aplay`).
+- **asdcontrol** — System/Hardware: external monitor brightness control via DDC/CI (used for Apple Studio/XDR displays).
+- **avahi** — Networking: mDNS/DNS-SD (Bonjour) daemon.
+- **bash-completion** — Shell: bash tab-completion scripts.
+- **bat** — CLI: `cat` with syntax highlighting.
+- **bluetui** — System: Bluetooth TUI.
+- **bolt** — System/Hardware: Thunderbolt device authorization daemon.
+- **brightnessctl** — System/Hardware: backlight/brightness control.
+- **btop** — CLI: resource monitor.
+- **chromium** — Internet: web browser.
+- **clang** — Dev: C/C++/LLVM compiler.
+- **claude-code** — Dev/AI: Anthropic's AI coding CLI.
+- **cliamp** — Media: retro terminal (TUI) music player inspired by Winamp (AUR).
+- **cups** — Printing: printing system.
+- **cups-browsed** — Printing: CUPS browsing/network printer daemon.
+- **cups-filters** — Printing: CUPS filter set.
+- **cups-pdf** — Printing: virtual PDF printer.
+- **docker** — Containers: container platform.
+- **docker-buildx** — Containers: Docker build extension.
+- **docker-compose** — Containers: Compose orchestration.
+- **dosfstools** — Storage: FAT filesystem tools.
+- **dotnet-runtime-9.0** — Dev/runtime: .NET 9 runtime.
+- **dust** — CLI: disk-usage visualizer.
+- **evince** — Documents: GNOME document/PDF viewer.
+- **exfatprogs** — Storage: exFAT filesystem tools.
+- **expac** — System: pacman database query tool.
+- **eza** — CLI: modern `ls`.
+- **fastfetch** — CLI: system info display.
+- **fcitx5** — Input/i18n: input method framework.
+- **fcitx5-gtk** — Input/i18n: GTK input-method module.
+- **fcitx5-qt** — Input/i18n: Qt input-method module.
+- **fd** — CLI: fast `find` alternative.
+- **ffmpegthumbnailer** — Media: video thumbnails for file managers.
+- **fontconfig** — Fonts: font configuration library.
+- **fzf** — CLI: fuzzy finder.
+- **github-cli** — Dev: `gh` GitHub CLI.
+- **gnome-calculator** — Utility: calculator.
+- **gnome-disk-utility** — System: "Disks" GUI.
+- **gnome-keyring** — Security: secrets/keyring daemon.
+- **gnome-themes-extra** — Theming: extra GTK themes.
+- **grim** — Wayland: screenshot capture tool.
+- **gpu-screen-recorder** — Media: GPU-accelerated screen recorder.
+- **gum** — CLI: TUI toolkit for shell scripts (Charm).
+- **gvfs-mtp** — File mgmt: GVfs backend for MTP (Android) devices.
+- **gvfs-nfs** — File mgmt: GVfs NFS backend.
+- **gvfs-smb** — File mgmt: GVfs SMB/Windows-share backend.
+- **hypridle** — Wayland: idle-management daemon.
+- **hyprland** — Wayland: tiling compositor/WM.
+- **hyprland-guiutils** — Wayland: GUI dialogs/utilities for Hyprland.
+- **hyprland-preview-share-picker** — Wayland: screen-share source picker.
+- **hyprlock** — Wayland: screen locker.
+- **hyprpicker** — Wayland: on-screen color picker.
+- **hyprsunset** — Wayland: blue-light/color-temperature filter.
+- **imagemagick** — Media: image manipulation CLI.
+- **impala** — Networking: TUI frontend for `iwd` Wi-Fi.
+- **imv** — Media: Wayland image viewer.
+- **inetutils** — Networking: basic network utilities.
+- **inxi** — System: system information script.
+- **iwd** — Networking: wireless (Wi-Fi) daemon.
+- **jq** — CLI: JSON processor.
+- **kdenlive** — Media: video editor.
+- **kernel-modules-hook** — System: keeps kernel modules available across kernel upgrades.
+- **kvantum-qt5** — Theming: Qt5 SVG theme engine.
+- **lazydocker** — Containers: Docker TUI.
+- **lazygit** — Dev: git TUI.
+- **less** — CLI: pager.
+- **libqalculate** — Libs: math/calculator library.
+- **libreoffice-fresh** — Office: office suite.
+- **libsecret** — Security: secret-storage library.
+- **libyaml** — Libs: YAML parser library.
+- **llvm** — Dev: LLVM compiler infrastructure.
+- **localsend** — Networking: AirDrop-style local file transfer.
+- **luarocks** — Dev: Lua package manager.
+- **mako** — Wayland: notification daemon.
+- **man-db** — Docs: `man` page system.
+- **mariadb-libs** — Dev/DB: MariaDB/MySQL client libraries.
+- **mise** — Dev: polyglot dev-tool version manager.
+- **mpv** — Media: media player.
+- **nautilus** — File mgmt: GNOME Files file manager.
+- **nautilus-python** — File mgmt: Python bindings for Nautilus extensions.
+- **noto-fonts** — Fonts: Google Noto fonts.
+- **noto-fonts-cjk** — Fonts: Noto CJK fonts.
+- **noto-fonts-emoji** — Fonts: Noto emoji font.
+- **nss-mdns** — Networking: mDNS hostname resolution for Avahi.
+- **nvim** — Editor: Neovim.
+- **obs-studio** — Media: streaming/recording.
+- **obsidian** — Productivity: Markdown notes/knowledge base.
+- **archy-nvim** — Editor/config: Archy's Neovim configuration.
+- **archy-walker** — Wayland: Walker app launcher (Archy-packaged).
+- **pamixer** — Audio: PulseAudio/PipeWire volume CLI.
+- **pinta** — Graphics: simple image editor.
+- **playerctl** — Media: MPRIS media-player CLI control.
+- **plocate** — CLI: fast `locate` file index.
+- **plymouth** — System: boot splash.
+- **polkit-gnome** — Security: Polkit authentication agent.
+- **postgresql-libs** — Dev/DB: PostgreSQL client libraries.
+- **power-profiles-daemon** — System: power-profile management.
+- **python-gobject** — Dev: PyGObject (GTK bindings).
+- **python-poetry-core** — Dev: Poetry build backend.
+- **python-terminaltexteffects** — CLI: terminal text-animation effects.
+- **qt5-wayland** — Wayland/libs: Qt5 Wayland platform plugin.
+- **ripgrep** — CLI: fast `grep` alternative.
+- **ruby** — Dev: Ruby language.
+- **rust** — Dev: Rust toolchain.
+- **satty** — Wayland: screenshot annotation tool.
+- **sddm** — System: display manager / login screen.
+- **signal-desktop** — Communication: Signal messenger.
+- **slurp** — Wayland: region selector for screenshots.
+- **socat** — Networking: multipurpose socket relay.
+- **spotify** — Media: music streaming client.
+- **starship** — Shell: cross-shell prompt.
+- **sushi** — File mgmt: Nautilus file quick-previewer.
+- **swaybg** — Wayland: wallpaper setter.
+- **swayosd** — Wayland: on-screen display for volume/brightness.
+- **system-config-printer** — Printing: printer configuration GUI.
+- **tesseract** — Utility: OCR engine.
+- **tesseract-data-eng** — Utility: English OCR training data.
+- **tldr** — Docs: simplified community man pages.
+- **tmux** — Terminal: terminal multiplexer.
+- **tobi-try** — Dev CLI: ephemeral dev workspaces; Archy-internal name for `try-cli` (not published under this exact name in Arch/AUR).
+- **tree-sitter-cli** — Dev: parser-generator CLI used by editors.
+- **ttf-ia-writer** — Fonts: iA Writer fonts.
+- **ttf-jetbrains-mono-nerd** — Fonts: JetBrains Mono Nerd Font.
+- **typora** — Productivity: Markdown editor.
+- **tzupdate** — System: auto-sets timezone from IP.
+- **ufw** — Security: Uncomplicated Firewall.
+- **ufw-docker** — Security/Containers: Docker-aware UFW rules.
+- **unzip** — CLI: ZIP extractor.
+- **usage** — Dev: CLI-definition/spec tool (by the mise author).
+- **uwsm** — Wayland: systemd user-session manager for the compositor.
+- **waybar** — Wayland: status bar.
+- **whois** — Networking: WHOIS lookup client.
+- **wireless-regdb** — Networking: wireless regulatory domain database.
+- **wiremix** — Audio: PipeWire TUI mixer.
+- **wireplumber** — Audio: PipeWire session/policy manager.
+- **wl-clipboard** — Wayland: clipboard CLI (`wl-copy`/`wl-paste`).
+- **woff2-font-awesome** — Icons/Fonts: Font Awesome icon font.
+- **xdg-desktop-portal-gtk** — Wayland: GTK portal backend.
+- **xdg-desktop-portal-hyprland** — Wayland: Hyprland portal backend (screen sharing).
+- **xdg-terminal-exec** — Wayland/CLI: launches the user's default terminal.
+- **xmlstarlet** — CLI: XML command-line toolkit.
+- **xournalpp** — Productivity: handwriting/PDF annotation.
+- **yaru-icon-theme** — Theming: Ubuntu Yaru icon theme.
+- **yay** — System: AUR helper.
+- **zoxide** — Shell/CLI: smarter `cd`.
+
+## Notes
+
+- Descriptions for `asdcontrol` and `usage` are inferred from local scripts and
+  upstream naming rather than their own package metadata.
+- `tobi-try` is not a published Arch/AUR name; the equivalent AUR package is
+  `try-cli`.

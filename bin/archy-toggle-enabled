@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archy:summary=Check if a toggle is enabled (flag file exists)
+# archy:args=<flag-name>
+
+[[ -f "$HOME/.local/state/archy/toggles/$1" ]]

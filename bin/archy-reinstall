@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# archy:summary=Reinstall Archy packages and reset default configs
+# archy:requires-sudo=true
+
+set -e
+
+# Attempt to reinstall all default Archy packages and reset all the default configs.
+
+echo -e "This will reinstall all the default Archy packages and reset all default configs.\nWarning: All user changes to configs will be lost.\n"
+
+if gum confirm "Are you sure you want to reinstall and lose all config changes?"; then
+  archy-reinstall-git
+  archy-reinstall-pkgs
+  archy-reinstall-configs
+
+  gum confirm "System has been reinstalled. Reboot?" && archy-system-reboot
+fi

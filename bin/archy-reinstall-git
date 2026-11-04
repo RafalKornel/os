@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# archy:summary=Reinstall the Archy source directory from git
+
+set -e
+
+# Reinstall the Archy configuration directory from the git source.
+
+REPO_URL=https://github.com/RafalKornel/os
+
+git clone --depth=1 $REPO_URL ~/.local/share/archy-new >/dev/null
+mv $ARCHY_PATH ~/.local/share/archy-old
+mv ~/.local/share/archy-new $ARCHY_PATH

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Reload mako configuration (used by the Archy theme switching).
+
+makoctl reload

@@ -1,0 +1,11 @@
+# Changes require a restart to take effect.
+
+# Ensure Archy bins are in the path
+export ARCHY_PATH=$HOME/.local/share/archy
+export PATH=$ARCHY_PATH/bin:$PATH:$HOME/.local/bin
+
+# Set default terminal and editor
+source ~/.config/uwsm/default
+
+# Activate mise if present on the system
+archy-cmd-present mise && eval "$(mise activate bash --shims)"

@@ -1,0 +1,6 @@
+source ~/.local/share/archy/default/bash/envs
+source ~/.local/share/archy/default/bash/shell
+source ~/.local/share/archy/default/bash/aliases
+source ~/.local/share/archy/default/bash/functions
+source ~/.local/share/archy/default/bash/init
+[[ $- == *i* ]] && bind -f ~/.local/share/archy/default/bash/inputrc

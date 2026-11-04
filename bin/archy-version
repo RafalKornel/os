@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Print the installed Archy version
+
+cat $ARCHY_PATH/version

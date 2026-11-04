@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# archy:summary=List available themes
+# archy:examples=archy theme list | archy theme set "Tokyo Night"
+
+{
+  find ~/.config/archy/themes/ -mindepth 1 -maxdepth 1 \( -type d -o -type l \) -printf '%f\n'
+  find "$ARCHY_PATH/themes/" -mindepth 1 -maxdepth 1 -type d -printf '%f\n'
+} | sort -u | while read -r name; do
+  echo "$name" | sed -E 's/(^|-)([a-z])/\1\u\2/g; s/-/ /g'
+done

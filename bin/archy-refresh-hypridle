@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# archy:summary=Overwrite the user config for hypridle with the Archy default and restart the service.
+
+archy-refresh-config hypr/hypridle.conf
+archy-restart-hypridle

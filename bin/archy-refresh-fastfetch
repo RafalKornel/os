@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# archy:summary=Overwrite the user config for fastfetch with the Archy default.
+
+archy-refresh-config fastfetch/config.jsonc

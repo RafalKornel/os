@@ -1,0 +1,22 @@
+run_logged $ARCHY_INSTALL/config/config.sh
+run_logged $ARCHY_INSTALL/config/theme.sh
+run_logged $ARCHY_INSTALL/config/branding.sh
+run_logged $ARCHY_INSTALL/config/gpg.sh
+run_logged $ARCHY_INSTALL/config/increase-sudo-tries.sh
+run_logged $ARCHY_INSTALL/config/increase-lockout-limit.sh
+run_logged $ARCHY_INSTALL/config/ssh-flakiness.sh
+run_logged $ARCHY_INSTALL/config/increase-file-watchers.sh
+run_logged $ARCHY_INSTALL/config/increase-fd-limit.sh
+run_logged $ARCHY_INSTALL/config/xcompose.sh
+run_logged $ARCHY_INSTALL/config/docker.sh
+run_logged $ARCHY_INSTALL/config/mimetypes.sh
+run_logged $ARCHY_INSTALL/config/user-dirs.sh
+run_logged $ARCHY_INSTALL/config/nautilus-python.sh
+run_logged $ARCHY_INSTALL/config/walker-elephant.sh
+run_logged $ARCHY_INSTALL/config/fast-shutdown.sh
+run_logged $ARCHY_INSTALL/config/input-group.sh
+run_logged $ARCHY_INSTALL/config/powerprofilesctl-rules.sh
+run_logged $ARCHY_INSTALL/config/wifi-powersave-rules.sh
+
+run_logged $ARCHY_INSTALL/config/hardware/bluetooth.sh
+run_logged $ARCHY_INSTALL/config/hardware/printer.sh
