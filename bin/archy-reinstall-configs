@@ -7,7 +7,7 @@ set -e
 
 # Overwrite all user configs with the Archy defaults.
 
-if (( EUID == 0 )); then
+if ((EUID == 0)); then
   echo "Error: This script should not be run as root"
   exit 1
 fi
@@ -21,4 +21,3 @@ $(bash $ARCHY_PATH/install/config/theme.sh)
 
 archy-refresh-limine
 archy-refresh-plymouth
-archy-nvim-setup

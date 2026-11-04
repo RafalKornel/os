@@ -9,7 +9,11 @@ export ARCHY_INSTALL="$ARCHY_PATH/install"
 export ARCHY_INSTALL_LOG_FILE="/var/log/archy-install.log"
 export PATH="$ARCHY_PATH/bin:$PATH"
 
+cp -R . $ARCHY_PATH
+
 # Install
+source "$ARCHY_INSTALL/helpers/all.sh"
+source "$ARCHY_INSTALL/preflight/all.sh"
 source "$ARCHY_INSTALL/packaging/all.sh"
 source "$ARCHY_INSTALL/config/all.sh"
 source "$ARCHY_INSTALL/login/all.sh"
