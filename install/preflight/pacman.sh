@@ -9,7 +9,7 @@ sudo pacman-key --recv-keys 40DFB630FF42BCFFB047046CF0134EE680CAC571 --keyserver
 sudo pacman-key --lsign-key 40DFB630FF42BCFFB047046CF0134EE680CAC571
 
 sudo pacman -Sy
-archy-pkg-add archy-keyring
+archy-pkg-add omarchy-keyring
 
 # Refresh all repos
 sudo pacman -Syyuu --noconfirm
