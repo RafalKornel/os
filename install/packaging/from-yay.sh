@@ -1,1 +1,0 @@
-yay -Sy glow
