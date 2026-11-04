@@ -1,8 +1,8 @@
 # Archy
 
-Archy is a beautiful, modern & opinionated Linux distribution by DHH.
+Archy is arch based Linux configuration by Rafał Kornel.
 
-Read more at [archy.org](https://archy.org).
+Based on old [omarchy](https://github.com/omacom/omarchy) but without AI slop and tailored for me.
 
 ## License
 
