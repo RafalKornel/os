@@ -3,14 +3,14 @@
 # archy:summary=Ensure the Archy keyring package is installed and populated
 # archy:requires-sudo=true
 
-if archy-pkg-missing archy-keyring || ! sudo pacman-key --list-keys 40DFB630FF42BCFFB047046CF0134EE680CAC571 &>/dev/null; then
+if archy-pkg-missing omarchy-keyring || ! sudo pacman-key --list-keys 40DFB630FF42BCFFB047046CF0134EE680CAC571 &>/dev/null; then
   sudo pacman-key --recv-keys 40DFB630FF42BCFFB047046CF0134EE680CAC571 --keyserver keys.openpgp.org
   sudo pacman-key --lsign-key 40DFB630FF42BCFFB047046CF0134EE680CAC571
 
   # This is generally not a good idea, but this is a special case because we're going to be updating
   # the full set of packages in archy-update-system-pkgs right after this (and it needs latest keyring)!
   sudo pacman -Sy
-  archy-pkg-add archy-keyring
+  archy-pkg-add omarchy-keyring
 
   sudo pacman-key --list-keys 40DFB630FF42BCFFB047046CF0134EE680CAC571
 fi
