@@ -1,4 +1,5 @@
 run_logged $ARCHY_INSTALL/config/config.sh
+run_logged $ARCHY_INSTALL/config/network.sh
 run_logged $ARCHY_INSTALL/config/theme.sh
 run_logged $ARCHY_INSTALL/config/branding.sh
 run_logged $ARCHY_INSTALL/config/gpg.sh

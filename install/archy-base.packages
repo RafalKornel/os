@@ -20,6 +20,7 @@ docker-compose
 dosfstools
 dotnet-runtime-9.0
 dust
+elephant
 evince
 exfatprogs
 expac
