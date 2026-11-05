@@ -20,19 +20,6 @@ docker-compose
 dosfstools
 dotnet-runtime-9.0
 dust
-elephant
-elephant-calc
-elephant-clipboard
-elephant-bluetooth
-elephant-desktopapplications
-elephant-files
-elephant-menus
-elephant-providerlist
-elephant-runner
-elephant-symbols
-elephant-unicode
-elephant-websearch
-elephant-todo
 walker
 libqalculate
 evince
@@ -48,7 +35,6 @@ ffmpegthumbnailer
 fontconfig
 fzf
 github-cli
-glow
 gnome-calculator
 gnome-keyring
 gnome-themes-extra
@@ -71,7 +57,6 @@ inetutils
 iwd
 jq
 kernel-modules-hook
-keyd
 kvantum-qt5
 lazydocker
 lazygit

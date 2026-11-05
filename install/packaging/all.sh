@@ -1,4 +1,5 @@
 run_logged $ARCHY_INSTALL/packaging/base.sh
+run_logged $ARCHY_INSTALL/packaging/yay.sh
 run_logged $ARCHY_INSTALL/packaging/keyd.sh
 run_logged $ARCHY_INSTALL/packaging/zsh.sh
 run_logged $ARCHY_INSTALL/packaging/fonts.sh

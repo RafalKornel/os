@@ -1,0 +1,17 @@
+# Packages installed through yay via archy-pkg-aur-add, not by pacman in archy-base.packages
+
+elephant
+elephant-bluetooth
+elephant-calc
+elephant-clipboard
+elephant-desktopapplications
+elephant-files
+elephant-menus
+elephant-providerlist
+elephant-runner
+elephant-symbols
+elephant-todo
+elephant-unicode
+elephant-websearch
+glow
+keyd
