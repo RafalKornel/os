@@ -6,7 +6,7 @@ mkdir -p "$HOME/.zsh"
 rm -rf "$HOME/.zsh/typewritten"
 git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
 
-cp -R ~/.local/share/archy/config/zsh ~/.zsh
+cp ~/.local/share/archy/config/zsh/alias.zsh ~/.zsh/alias.zsh
 cp ~/.local/share/archy/config/zsh/.zshrc ~/.zshrc
 
 ZSH_BIN="$(command -v zsh)"

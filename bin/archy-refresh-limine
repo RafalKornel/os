@@ -3,7 +3,7 @@
 # archy:summary=Overwrite the user config for the Limine bootloader and rebuild it.
 # archy:requires-sudo=true
 
-if [[ -f /boot/EFI/Linux/archy_linux.efi ]] && [[ -f /boot/EFI/Linux/$(cat /etc/machine-id)_linux.efi ]]; then
+if sudo test -f /boot/EFI/Linux/archy_linux.efi && sudo test -f "/boot/EFI/Linux/$(cat /etc/machine-id)_linux.efi"; then
   echo "Cleanup extra UKI"
   sudo rm -f /boot/EFI/Linux/$(cat /etc/machine-id)_linux.efi
 fi
