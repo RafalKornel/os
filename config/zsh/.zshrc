@@ -125,5 +125,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=/home/nerqus/.opencode/bin:$PATH
 
 # . "$HOME/.local/share/../bin/env"
-# source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh
 source ~/.zsh/alias.zsh
