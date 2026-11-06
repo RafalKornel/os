@@ -8,6 +8,8 @@ leftcontrol = capslock
 capslock = leftmeta
 leftmeta = leftalt
 102nd = leftshift
+rightalt = rightcontrol
+rightcontrol = rightalt
 
 # backspace = macro(S-home backspace)
 # delete = macro(S-end delete)
